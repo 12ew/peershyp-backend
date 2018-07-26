@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  item_name: MyString
+  departing_city: MyString
+  destination_city: MyString
+  weight: 1
+  description: MyString
+  status: MyString
+  expat_id: 1
+  trip_id: 1
+  item_cost: MyString
+  item_url: MyString
+  quantity: 1
+
+two:
+  item_name: MyString
+  departing_city: MyString
+  destination_city: MyString
+  weight: 1
+  description: MyString
+  status: MyString
+  expat_id: 1
+  trip_id: 1
+  item_cost: MyString
+  item_url: MyString
+  quantity: 1
