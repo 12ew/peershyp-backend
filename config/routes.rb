@@ -8,14 +8,16 @@ Rails.application.routes.draw do
       # post '/login', to: 'auth#create_traveler'
       # get '/reauth', to: 'auth#show_traveler'
 
-      resources :expats, only: [:index, :update, :show, :create]
-      resources :requests, only: [:index, :create, :show, :update]
-      # resources :expats, only: [:index, :update, :show, :create] do
-      #   resources :requests, only: [:index, :create, :show, :update]
-      # end
+      # resources :expats, only: [:index, :update, :show, :create]
+      # resources :requests, only: [:index, :create, :show, :update]
+      resources :expats, only: [:index, :update, :show, :create] do
+        resources :requests, only: [:index, :create, :show, :update]
+      end
 
-      resources :travelers, only: [:index, :update, :show, :create]
-      resources :trips, only: [:index, :update, :create, :show]
+      resources :travelers, only: [:index, :update, :show, :create] do
+        resources :trips, only: [:index, :update, :create, :show]
+      end
+
     end
   end
 

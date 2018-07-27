@@ -1,5 +1,5 @@
 class Api::V1::TravelersController < ApplicationController
-  before_action :find_traveler, only: [:update]
+  before_action :find_traveler, only: [:update, :trips]
 
   def index
     @travelers = Traveler.all
@@ -28,6 +28,11 @@ class Api::V1::TravelersController < ApplicationController
       render json: { errors: @traveler.errors.full_messages }, status: :unprocessible_entity
     end
   end
+
+  # def trips
+  #   @my_trips = @traveler.trips
+  #   render json: @my_trips
+  # end
 
   private
 

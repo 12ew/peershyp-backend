@@ -2,7 +2,7 @@ class Api::V1::RequestsController < ApplicationController
   before_action :find_request, only: [:update]
 
   def index
-    @requests = Request.all
+    @requests = Request.where(expat_id: params[:expat_id])
     render json: @requests
   end
 

@@ -2,7 +2,8 @@ class Api::V1::TripsController < ApplicationController
   before_action :find_trip, only: [:update]
 
   def index
-    @trips = Trip.all
+    # byebug
+    @trips = Trip.where(traveler_id: params[:traveler_id])
     render json: @trips
   end
 
