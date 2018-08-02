@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       post '/login', to: 'auth#create'
       get '/reauth', to: 'auth#show'
+      get '/requests', to: 'requests#requests'
       # post '/login', to: 'auth#create_traveler'
       # get '/reauth', to: 'auth#show_traveler'
 

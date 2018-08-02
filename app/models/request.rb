@@ -1,6 +1,6 @@
 class Request < ApplicationRecord
   belongs_to :expat
-  belongs_to :trip
+  belongs_to :trip, optional: true
 
   validates :departing_city, presence: true
   validates :destination_city, presence: true
