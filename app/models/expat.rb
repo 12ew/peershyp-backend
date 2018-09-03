@@ -12,5 +12,5 @@ class Expat < ApplicationRecord
   validates :zip_code, presence: true
   validates :password, presence: true
   validates :phone_number, presence: true
-  validates :identification_num, presence: true
+  # validates :identification_num, presence: true
 end
