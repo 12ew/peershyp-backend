@@ -13,7 +13,6 @@ class Api::V1::ExpatsController < ApplicationController
 
   def create
     @expat = Expat.new(expat_params)
-    # byebug
     if @expat.save
       render json: @expat, status: :accepted
     else

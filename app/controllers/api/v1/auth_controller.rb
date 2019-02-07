@@ -1,7 +1,6 @@
 class Api::V1::AuthController < ApplicationController
 
   def create
-    # byebug
     if params[:category] === 'Traveler'
       @user = Traveler.find_by(email: params[:email])
     else

@@ -13,7 +13,6 @@ class ApplicationController < ActionController::API
   end
 
   def encoded_token(user)
-    # byebug
     JWT.encode({user_id: user.id, category: user.class.name}, 'buildmeasurelearn', 'HS256')
   end
 

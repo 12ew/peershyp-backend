@@ -18,7 +18,6 @@ class Api::V1::RequestsController < ApplicationController
 
   def create
     @request = Request.new(request_params)
-    # byebug
     if @request.save
       render json: @request, status: :accepted
     else
